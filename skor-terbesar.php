@@ -1,9 +1,35 @@
 <?php
 function skor_terbesar($arr){
 //kode di sini
-$skor = array_column($arr, 'nilai');
-array_multisort($skor, 'sort_desc', $arr);
+$output =[];
+$outpt1=0;
+$outpt2=0;
+$outpt3=0;
+
+foreach ($arr as $key => $value){
+  if ($value['nilai']>$outpt1 and $value['kelas'] == 'Laravel'){
+    $outpt1=$value['nilai'];
+  }
+  else if ($value['nilai']>$outpt2 and $value['kelas'] == 'React Native'){
+    $outpt2=$value['nilai'];
+  }
+  else if ($value['nilai']>$outpt3 and $value['kelas'] == 'React JS'){
+    $outpt3=$value['nilai'];
+}
+else{
+  continue;
+}
+$output[$value['kelas']] = [ 
+  'nama' => $value['nama'], 
+  'kelas' => $value['kelas'],
+  'nilai' => $value['nilai']
+];
+}
+return $output;
 };
+/*$output = array_column($arr, 'nilai');
+array_multisort($output, SORT_DESC, $arr);
+}; */
 
 // TEST CASES
 $skor = [
