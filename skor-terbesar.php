@@ -1,7 +1,9 @@
 <?php
 function skor_terbesar($arr){
 //kode di sini
-}
+$skor = array_column($arr, 'nilai');
+array_multisort($skor, 'sort_desc', $arr);
+};
 
 // TEST CASES
 $skor = [
