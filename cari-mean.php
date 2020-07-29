@@ -2,10 +2,11 @@
 
 function cari_mean($arr){
 //kode di sini
+    if(count($arr)){
+        echo $average = array_sum($arr)/count($arr);
+        echo "<br>";
+    }
 }
-
-// coba coba gaes
-//key
 
 //TEST CASE 
 echo cari_mean([1, 2, 3, 4, 5]); // 3
