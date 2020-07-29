@@ -4,6 +4,9 @@ function cari_mean($arr){
 //kode di sini
 }
 
+// coba coba gaes
+//key
+
 //TEST CASE 
 echo cari_mean([1, 2, 3, 4, 5]); // 3
 echo cari_mean([3, 5, 7, 5, 3]); // 5
